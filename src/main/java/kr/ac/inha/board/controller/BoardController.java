@@ -17,8 +17,11 @@ public class BoardController {
 	public String name(String id) {
 		return "당신의 학번은 " + id + "입니다.";
 	}
-//	@RequestMapping("/gugu")
-//	public String gugu(int a) {
-//		
-//	}
+	@RequestMapping("/gugu")
+	public String gugu(int n) {
+		String result = "구구단 : ";
+		for(int i = 1; i<= 9; i++)
+			result = result + n + "*" + i + "=" + (n*i) + "";
+		return	result;
+	}
 }
